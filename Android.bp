@@ -75,6 +75,10 @@ android_app {
         "styleprotoslite",
     ],
 
+    required: [
+        "privapp_whitelist_com.android.wallpaper",
+    ],
+
     srcs: [
         ":WallpaperPicker2_srcs",
         ":ThemePicker_srcs",
@@ -98,4 +102,12 @@ android_app {
     manifest: "AndroidManifest.xml",
     additional_manifests: [":WallpaperPicker2_Manifest"],
     overrides: ["WallpaperPicker2"],
+}
+
+prebuilt_etc {
+    name: "privapp_whitelist_com.android.wallpaper",
+    system_ext_specific: true,
+    sub_dir: "permissions",
+    src: "privapp_whitelist_com.android.wallpaper.xml",
+    filename_from_src: true,
 }
