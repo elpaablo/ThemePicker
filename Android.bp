@@ -76,6 +76,7 @@ android_app {
     ],
 
     required: [
+        "default_permissions_com.android.wallpaper",
         "privapp_whitelist_com.android.wallpaper",
     ],
 
@@ -110,4 +111,12 @@ prebuilt_etc {
     sub_dir: "permissions",
     src: "privapp_whitelist_com.android.wallpaper.xml",
     filename_from_src: true,
+}
+
+prebuilt_etc_xml {
+    name: "default_permissions_com.android.wallpaper",
+    src: "default_permissions_com.android.wallpaper.xml",
+    system_ext_specific: true,
+    filename_from_src: true,
+    sub_dir: "default-permissions",
 }
