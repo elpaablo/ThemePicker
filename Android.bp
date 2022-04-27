@@ -76,7 +76,7 @@ android_app {
         "SettingsLibSettingsTheme",
         "SystemUI-statsd",
         "styleprotoslite",
-        "vendor_support",
+        "VendorSupport-preference",
     ],
 
     required: [
